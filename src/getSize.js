@@ -6,7 +6,7 @@ var uglifyjs = require('uglifyjs');
 
 module.exports = function (filePaths) {
 
-    var result = {};
+    var result = [];
 
     //filePaths can be either a single string or an array of paths
     if (typeof filePaths === 'string') {
@@ -19,7 +19,8 @@ module.exports = function (filePaths) {
             fromString: true
         }).code;
 
-        result[path.basename(filePath)] = {
+        result.push = {
+            file: path.basename(filePath),
             raw: Buffer.byteLength(fileContent, 'utf8'),
             min: Buffer.byteLength(fileMinContent, 'utf8'),
             gzip: gzipSize.sync(fileMinContent)
