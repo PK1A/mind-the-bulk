@@ -19,12 +19,12 @@ module.exports = function (filePaths) {
             fromString: true
         }).code;
 
-        result.push = {
+        result.push({
             file: path.basename(filePath),
             raw: Buffer.byteLength(fileContent, 'utf8'),
             min: Buffer.byteLength(fileMinContent, 'utf8'),
             gzip: gzipSize.sync(fileMinContent)
-        };
+        });
     });
 
     return result;
