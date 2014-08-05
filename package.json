@@ -1,0 +1,16 @@
+{
+  "name": "mind-the-bulk",
+  "version": "0.0.1",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.0",
+    "gulp-jshint": "^1.8.3"
+  },
+  "dependencies": {
+    "gzip-size": "~0.2.0",
+    "uglifyjs": "~2.3.6"
+  }
+}
